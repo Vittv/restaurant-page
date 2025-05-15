@@ -2,4 +2,137 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    --bar-bg-color: #111;
+    --footer-bar-bg-color: #111;
+    --main-content-bg-color: #e7e7e7;
+    --main-text-color: #212225;
+    --bar-text-color: #e7e7e7;
+
+    --golden-text-color: #e8d037;
+}
+
+/* general style */
+body {
+    overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* or absolute, depending on layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* 0.5 = 50% darkness */
+  z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 1.6rem 1rem;
+    background-color: var(--bar-bg-color);
+    justify-content: space-between;
+}
+
+.nav-container {
+    display: flex;
+    gap: 1rem;
+}
+
+nav button {
+    border: none;
+    background-color: inherit;
+    font-size: calc(0.2vw + 1rem);
+    color: var(--bar-text-color);
+    font-weight: 300;
+}
+
+.nav-container button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgb(228, 184, 24);
+}
+
+.home-vitt {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.home-vitt span {
+    font-style: normal;
+    color: var(--golden-text-color);
+}
+
+.home-vitt:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+/* home content */
+
+.hero h1 {
+    font-size: clamp(5rem, 12vw, 10rem);
+    color: var(--bar-text-color);
+    font-weight: 300;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.hero p {
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    padding-top: 1rem;
+    color: var(--bar-text-color);
+}
+
+/* footer */
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--footer-bar-bg-color);
+    color: #f2f2f2;
+    padding: 1rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-icon {
+    font-size: 1.4rem;
+    color: inherit;
+    margin-left: 1rem;
+}
+
+.github-icon:hover {
+    filter: brightness(0.8)
 }
