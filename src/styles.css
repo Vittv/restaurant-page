@@ -12,6 +12,8 @@
     --bar-text-color: #e7e7e7;
 
     --golden-text-color: #e8d037;
+
+    scroll-behavior: smooth;
 }
 
 /* general style */
@@ -34,10 +36,11 @@ body::before {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #content {
+    padding-top: 5rem;
     display: flex;
     justify-content: center;
 }
@@ -46,7 +49,7 @@ body::before {
 nav {
     display: flex;
     width: 100%;
-    position: relative;
+    position: fixed;
     padding: 1.6rem 1rem;
     background-color: var(--bar-bg-color);
     justify-content: space-between;
@@ -93,6 +96,7 @@ nav button {
     font-size: clamp(5rem, 12vw, 10rem);
     color: var(--bar-text-color);
     font-weight: 300;
+    text-align: center;
 }
 
 .hero {
@@ -102,6 +106,7 @@ nav button {
     align-items: center;
     padding: 1rem;
     width: 100%;
+    user-select: none;
 }
 
 .hero p {
@@ -110,6 +115,104 @@ nav button {
     font-size: clamp(1.4rem, 3vw, 2.2rem);
     padding-top: 1rem;
     color: var(--bar-text-color);
+    text-align: center;
+}
+
+.bookReservationButton {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--bar-text-color);
+    border-radius: 1rem;
+    color: var(--bar-text-color);
+    padding: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.bookReservationButton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 1rem;
+    color: var(--bar-text-color);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 300;
+    user-select: none;
+}
+
+.about p {
+    margin-top: 4rem;
+    text-align: center;
+    max-width: 60ch;
+}
+
+.hours {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    color: var(--bar-text-color);
+}
+
+.hours h3 {
+    margin: 1rem 0;
+    user-select: none;
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    font-weight: 300;
+    border-bottom: 1px solid var(--bar-text-color);
+}
+
+.hours h4 {
+    letter-spacing: 0.3rem;
+    margin: 1rem 0;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    font-weight: 400;
+}
+
+.hours p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    display: flex;
+    color: var(--bar-text-color);
+}
+
+.location h3 {
+    margin: 1rem 0;
+    user-select: none;
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    font-weight: 300;
+    border-bottom: 1px solid var(--bar-text-color);
+}
+
+.location p:first-of-type {
+    margin-top: 1rem;
+}
+
+.location p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.location p:last-of-type {
+    margin-bottom: 2rem;
 }
 
 /* footer */
