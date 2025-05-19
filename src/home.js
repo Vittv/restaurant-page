@@ -1,5 +1,3 @@
-import backgroundImage from "./assets/backgroundrestaurant.jpg"
-
 export default function loadHome() {
     const content = document.getElementById("content");
     content.innerHTML = "";
@@ -12,12 +10,6 @@ export default function loadHome() {
     const headingDescription = document.createElement("p");
     heading.textContent = "Welcome to Vitt's";
     headingDescription.textContent = "Bringing comfort and flavor together since 2025";
-
-    // background image
-    document.body.style.backgroundImage = `url(${backgroundImage})`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundRepeat = "no-repeat";
 
     const bookReservationButton = document.createElement("button");
     bookReservationButton.classList.add("bookReservationButton");

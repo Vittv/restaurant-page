@@ -18,6 +18,7 @@
 
 /* general style */
 body {
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -53,6 +54,7 @@ nav {
     padding: 1.6rem 1rem;
     background-color: var(--bar-bg-color);
     justify-content: space-between;
+    z-index: 1;
 }
 
 .nav-container {
@@ -189,7 +191,6 @@ nav button {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    display: flex;
     color: var(--bar-text-color);
 }
 
@@ -215,6 +216,86 @@ nav button {
     margin-bottom: 2rem;
 }
 
+/* menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: var(--bar-text-color);
+}
+
+.menu h1 {
+    text-align: center;
+    font-size: clamp(5rem, 10vw, 8rem);
+    font-weight: 300;
+}
+
+.menu h3 {
+    margin: 1rem 0;
+    user-select: none;
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    font-weight: 300;
+    border-bottom: 1px solid var(--bar-text-color);
+}
+
+.menu p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.menu p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.menu-item-name {
+    font-weight: 400;
+}
+/* contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: var(--bar-text-color);
+}
+
+.contact h3 {
+    margin: 1rem 0;
+    user-select: none;
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    font-weight: 300;
+    border-bottom: 1px solid var(--bar-text-color);
+}
+
+.contact p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.contact-note {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 6px;
+    border: 3px solid #111; /* creates padding effect */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #111;
+}
 /* footer */
 footer {
     margin-top: auto;
@@ -222,6 +303,7 @@ footer {
     background-color: var(--footer-bar-bg-color);
     color: #f2f2f2;
     padding: 1rem;
+    user-select: none;
 }
 
 .footer-container {
